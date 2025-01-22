@@ -6,8 +6,8 @@
   --color-text: #f5f5f5;
   --color-accent: #ffae00;
   --color-muted: #999;
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
   --transition-fast: 0.3s ease;
   --transition-slow: 0.6s ease;
 }
