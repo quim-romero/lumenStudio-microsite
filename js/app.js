@@ -57,3 +57,43 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ========== Lightbox Modal ==========
+
+const gallery = document.querySelector('.gallery-grid');
+const modal = document.createElement('div');
+modal.classList.add('lightbox');
+modal.innerHTML = `
+  <div class="lightbox-content">
+    <img src="" alt="" class="lightbox-img" />
+    <p class="lightbox-caption"></p>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+  </div>
+`;
+document.body.appendChild(modal);
+
+const lightboxImg = modal.querySelector('.lightbox-img');
+const lightboxCaption = modal.querySelector('.lightbox-caption');
+const closeBtn = modal.querySelector('.lightbox-close');
+
+gallery.addEventListener('click', (e) => {
+  const item = e.target.closest('.gallery-item');
+  if (!item) return;
+
+  const img = item.querySelector('img');
+  const caption = item.querySelector('h3')?.textContent || '';
+
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCaption.textContent = caption;
+
+  modal.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) modal.classList.remove('active');
+});
