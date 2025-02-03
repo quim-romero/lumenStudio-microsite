@@ -356,3 +356,49 @@ p {
     padding-top: 2rem;
   }
 }
+
+/*==============================
+  Clients Section
+==============================*/
+.clients {
+  padding: 5rem 0;
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.clients .section-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.clients-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.client-logo img {
+  width: 100%;
+  max-width: 120px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.client-logo img:hover {
+  filter: grayscale(0%) brightness(1.2);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .clients-logos {
+    gap: 1.5rem;
+  }
+
+  .client-logo img {
+    max-width: 100px;
+  }
+}
