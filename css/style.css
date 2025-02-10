@@ -379,6 +379,18 @@ p {
   justify-items: center;
 }
 
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.client-logo:hover {
+  transform: scale(1.08);
+}
+
 .client-logo img {
   width: 100%;
   max-width: 120px;
@@ -387,10 +399,9 @@ p {
   transition: all 0.3s ease;
 }
 
-.client-logo img:hover {
+.client-logo:hover img {
   filter: grayscale(0%) brightness(1.2);
   opacity: 1;
-  transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
