@@ -97,3 +97,53 @@ closeBtn.addEventListener('click', () => {
 modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('active');
 });
+
+// ========== Contact Form Validation ==========
+
+const form = document.getElementById('contactForm');
+const nameInput = form.querySelector('#name');
+const emailInput = form.querySelector('#email');
+const messageInput = form.querySelector('#message');
+
+const nameError = form.querySelector('#nameError');
+const emailError = form.querySelector('#emailError');
+const messageError = form.querySelector('#messageError');
+const successMsg = form.querySelector('#formSuccess');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  let isValid = true;
+  clearMessages();
+
+  if (nameInput.value.trim().length < 2) {
+    nameError.textContent = 'Please enter your name';
+    isValid = false;
+  }
+
+  if (!validateEmail(emailInput.value.trim())) {
+    emailError.textContent = 'Please enter a valid email';
+    isValid = false;
+  }
+
+  if (messageInput.value.trim().length < 10) {
+    messageError.textContent = 'Message must be at least 10 characters';
+    isValid = false;
+  }
+
+  if (isValid) {
+    successMsg.textContent = 'Thanks! Your message has been sent.';
+    form.reset();
+  }
+});
+
+function clearMessages() {
+  nameError.textContent = '';
+  emailError.textContent = '';
+  messageError.textContent = '';
+  successMsg.textContent = '';
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
