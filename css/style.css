@@ -503,3 +503,45 @@ p {
   color: var(--color-accent);
   font-weight: 500;
 }
+
+/*==============================
+  Footer
+==============================*/
+.footer {
+  padding: 4rem 0 2rem;
+  background-color: var(--color-bg);
+  text-align: center;
+  border-top: 1px solid #1c1c1c;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons svg {
+  width: 28px;
+  height: 28px;
+  opacity: 0.6;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  color: var(--color-accent);
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.credits {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
