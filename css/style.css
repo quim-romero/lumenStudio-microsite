@@ -297,9 +297,12 @@ p {
 
 .about-photo img {
   width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
 .about-text .section-title {
@@ -336,10 +339,12 @@ p {
 }
 
 .bar-fill {
-  height: 100%;
   background: var(--color-accent);
+  height: 100%;
   border-radius: 4px;
-  transition: width 1s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  will-change: width;
+  width: 0;
 }
 
 @media (max-width: 768px) {
@@ -512,6 +517,9 @@ p {
   background-color: var(--color-bg);
   text-align: center;
   border-top: 1px solid #1c1c1c;
+  isolation: isolate;
+  position: relative;
+  z-index: 1;
 }
 
 .social-icons {
@@ -522,21 +530,28 @@ p {
 }
 
 .social-icons a {
-  display: inline-block;
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-text);
+  fill: none;
+  opacity: 0.6;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.social-icons svg {
-  width: 28px;
-  height: 28px;
-  opacity: 0.6;
-  color: var(--color-text);
-  transition: color 0.3s ease;
+.social-icons a:hover {
+  color: var(--color-accent);
 }
 
 .social-icons a:hover svg {
-  color: var(--color-accent);
-  transform: scale(1.2);
+  stroke: var(--color-accent);
   opacity: 1;
 }
 

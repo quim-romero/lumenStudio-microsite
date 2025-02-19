@@ -44,26 +44,6 @@
     <main>
       <!-- Gallery Section -->
       <section id="gallery" class="gallery">
-        <div class="container"></div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="about">
-        <div class="container"></div>
-      </section>
-
-      <!-- Clients Section -->
-      <section id="clients" class="clients">
-        <div class="container"></div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-        <div class="container"></div>
-      </section>
-
-      <!-- Gallery Section -->
-      <section id="gallery" class="gallery">
         <div class="container">
           <h2 class="section-title" data-aos="fade-up">Selected Works</h2>
 
@@ -143,9 +123,10 @@
           <div class="about-grid">
             <div class="about-photo" data-aos="fade-right">
               <img
-                src="/assets/img/artist.jpg"
+                src="/assets/img/artist.png"
                 alt="Portrait of the artist"
                 loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -159,28 +140,28 @@
               </p>
 
               <div class="skills">
-                <div class="skill" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill">
                   <span>Art Direction</span>
                   <div class="bar">
-                    <div class="bar-fill" style="width: 90%"></div>
+                    <div class="bar-fill" data-percentage="0.9"></div>
                   </div>
                 </div>
-                <div class="skill" data-aos="fade-up" data-aos-delay="250">
+                <div class="skill">
                   <span>Photography</span>
                   <div class="bar">
-                    <div class="bar-fill" style="width: 80%"></div>
+                    <div class="bar-fill" data-percentage="0.8"></div>
                   </div>
                 </div>
-                <div class="skill" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill">
                   <span>Brand Design</span>
                   <div class="bar">
-                    <div class="bar-fill" style="width: 75%"></div>
+                    <div class="bar-fill" data-percentage="0.75"></div>
                   </div>
                 </div>
-                <div class="skill" data-aos="fade-up" data-aos-delay="350">
+                <div class="skill">
                   <span>Illustration</span>
                   <div class="bar">
-                    <div class="bar-fill" style="width: 85%"></div>
+                    <div class="bar-fill" data-percentage="0.85"></div>
                   </div>
                 </div>
               </div>
@@ -431,5 +412,8 @@
     <!-- Scripts -->
     <script src="/lib/aos.js"></script>
     <script src="/js/app.js" defer></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </body>
 </html>
