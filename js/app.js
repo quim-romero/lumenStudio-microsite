@@ -1,3 +1,10 @@
+// ========== AOS Init ==========
+AOS.init({
+  once: true,
+  duration: 800,
+  easing: "ease-out",
+});
+
 // ========== Theme Toggle ==========
 
 const toggleBtn = document.getElementById("theme-toggle");

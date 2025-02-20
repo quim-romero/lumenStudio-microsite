@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/css/style.css" />
 
     <!-- AOS Library -->
-    <link rel="stylesheet" href="/lib/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
     <!-- Favicon -->
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
@@ -34,6 +34,15 @@
     </button>
 
     <header class="header">
+      <!-- Background video -->
+      <div class="hero-bg">
+        <video autoplay muted loop playsinline>
+          <source src="/assets/video/hero-loop.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+      </div>
+
       <div class="container">
         <h1 class="logo">Lumen Studio</h1>
         <p class="tagline">Crafting digital beauty</p>
@@ -410,7 +419,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/lib/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="/js/app.js" defer></script>
 
     <!-- GSAP CDN -->
