@@ -116,30 +116,6 @@ p {
   background-color: #ffc83d;
 }
 
-/*==============================
-  Dark Mode Toggle
-==============================*/
-#theme-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background var(--transition-fast);
-}
-
-#theme-toggle span {
-  width: 16px;
-  height: 16px;
-  background-color: #000;
-  border-radius: 50%;
-}
-
 .hero-bg {
   position: absolute;
   inset: 0;
